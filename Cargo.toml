@@ -1,0 +1,12 @@
+[package]
+name = "modbus_tcp_serial"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+
+[features]
+default = ["tcp", "serial"]
+serial = []
+tcp = []
