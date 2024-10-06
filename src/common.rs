@@ -40,16 +40,19 @@ impl ModBusBuffer {
     #[expect(dead_code)]
     /// Transaction Identifier
     pub(crate) const MBAP_TID: Range<usize> = 0..2;
+    #[cfg(feature = "tcp")]
     /// Protocol Identifier
     pub(crate) const MBAP_PID: Range<usize> = 2..4;
+    #[cfg(feature = "tcp")]
     /// Protocol Identifier
     pub(crate) const MBAP_LEN: Range<usize> = 4..6;
     #[expect(dead_code)]
     /// Unit Identifier
     pub(crate) const MBAP_UID: usize = 6;
 
+    #[cfg(feature = "serial")]
     /// Size of the CRC
-    pub(crate) const CRC_LEN: usize = 2;
+    pub(crate) const CRC_LEN: u16 = 2;
 
     /// Function Code
     pub(crate) const IDX_FUNCCODE: usize = 7;

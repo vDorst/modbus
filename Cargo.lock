@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "modbus_tcp_serial"
+name = "modbus"
 version = "0.1.0"

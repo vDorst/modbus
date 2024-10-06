@@ -1,12 +1,16 @@
 [package]
-name = "modbus_tcp_serial"
+name = "modbus"
 version = "0.1.0"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["René van Dorst <opensource@vdorst.com>"]
+description = "Modbus library TCP/SERIAL client/server"
+keywords = ["Modbus", "tcp", "serial", "no_std"]
 
 [dependencies]
 
-
 [features]
-default = ["tcp", "serial"]
+default = ["serial"]
 serial = []
 tcp = []
+gateway = ["tcp", "serial"]
